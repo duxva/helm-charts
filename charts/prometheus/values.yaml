@@ -765,6 +765,10 @@ serverFiles:
         static_configs:
           - targets:
             - localhost:9090
+      - job_name: 'argocd'
+        static_configs:
+        - targets: ['argocd-server:8083'] # Replace argocd-svc with your service name or IP
+
 
       # A scrape configuration for running Prometheus on a Kubernetes cluster.
       # This uses separate scrape configs for cluster components (i.e. API server, node)
