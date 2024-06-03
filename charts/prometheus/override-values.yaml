@@ -1,5 +1,6 @@
 prometheus:
   prometheusSpec:
+    serviceMonitorSelector: {}
     serviceMonitorSelector:
       matchLabels:
         app: argocd-server-metrics
