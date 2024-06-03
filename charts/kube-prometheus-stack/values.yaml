@@ -3567,7 +3567,9 @@ prometheus:
     ##
     serviceMonitorSelector: {}
     ## Example which selects ServiceMonitors with label "prometheus" set to "somelabel"
-    # serviceMonitorSelector:
+    serviceMonitorSelector:
+      matchLabels:
+        app: argocd-server-metrics
     #   matchLabels:
     #     prometheus: somelabel
 
